@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>SDIAMTR Links</title>
-  <meta name="description" content="SDIAMTR resmi bağlantıları">
+  <title>SDIAM Links</title>
+  <meta name="description" content="Siber Diplomasi ve İstihbarat Araştırmaları Merkezi official links">
   <meta name="theme-color" content="#020b32">
 
   <style>
@@ -41,11 +41,50 @@
       min-height:calc(100vh - 40px);
       background:var(--card);
       border-radius:22px;
-      padding:76px 28px 26px;
+      padding:28px 28px 26px;
       display:flex;
       flex-direction:column;
       align-items:center;
       box-shadow:0 18px 45px rgba(0,0,0,.22);
+    }
+
+    .top{
+      width:100%;
+      display:flex;
+      justify-content:flex-end;
+      margin-bottom:32px;
+    }
+
+    .lang{
+      border:1px solid rgba(255,255,255,.35);
+      border-radius:999px;
+      padding:4px;
+      display:flex;
+      gap:4px;
+      background:rgba(255,255,255,.08);
+    }
+
+    .lang button{
+      border:0;
+      border-radius:999px;
+      padding:7px 11px;
+      color:#fff;
+      background:transparent;
+      font-weight:800;
+      font-size:12px;
+      cursor:pointer;
+    }
+
+    .lang button.active{
+      background:#fff;
+      color:#040b2f;
+    }
+
+    .lang button:focus-visible,
+    .social:focus-visible,
+    .link:focus-visible{
+      outline:3px solid var(--ring);
+      outline-offset:3px;
     }
 
     .logo{
@@ -55,31 +94,33 @@
       background:#fff;
       object-fit:contain;
       padding:8px;
-      margin-bottom:12px;
+      margin-bottom:14px;
     }
 
     h1{
-      margin:0 0 4px;
-      font-size:26px;
-      line-height:1.15;
-      letter-spacing:-.02em;
-      font-weight:800;
+      max-width:450px;
+      margin:0 0 10px;
+      text-align:center;
+      font-size:25px;
+      line-height:1.18;
+      letter-spacing:-.03em;
+      font-weight:850;
     }
 
     .bio{
-      max-width:390px;
+      max-width:430px;
       margin:0;
       color:var(--text);
       text-align:center;
       font-size:16px;
       line-height:1.45;
-      font-weight:600;
+      font-weight:650;
     }
 
     .socials{
       display:flex;
-      gap:22px;
-      margin:22px 0 36px;
+      gap:24px;
+      margin:26px 0 38px;
     }
 
     .social{
@@ -87,20 +128,14 @@
       text-decoration:none;
       display:grid;
       place-items:center;
-      width:28px;
-      height:28px;
+      width:30px;
+      height:30px;
     }
 
     .social svg{
-      width:28px;
-      height:28px;
+      width:30px;
+      height:30px;
       fill:currentColor;
-    }
-
-    .social:focus-visible,
-    .link:focus-visible{
-      outline:3px solid var(--ring);
-      outline-offset:3px;
     }
 
     .links{
@@ -170,16 +205,25 @@
         min-height:100vh;
         border-radius:0;
         box-shadow:none;
-        padding:58px 18px 22px;
+        padding:22px 18px;
       }
+
+      .top{margin-bottom:26px}
 
       .logo{
         width:88px;
         height:88px;
       }
 
-      h1{font-size:24px}
-      .bio{font-size:15px}
+      h1{
+        font-size:22px;
+        max-width:340px;
+      }
+
+      .bio{
+        font-size:15px;
+        max-width:330px;
+      }
 
       .link{
         min-height:62px;
@@ -196,15 +240,26 @@
 
 <body>
   <main>
+    <div class="top">
+      <div class="lang" aria-label="Language selector">
+        <button id="enBtn" class="active" type="button" onclick="setLang('en')">EN</button>
+        <button id="trBtn" type="button" onclick="setLang('tr')">TR</button>
+      </div>
+    </div>
+
     <img class="logo" src="logo.webp" alt="SDIAM logo">
 
-    <h1>sdiamtr</h1>
+    <h1 data-en="Cyber Diplomacy and Intelligence Research Center" data-tr="Siber Diplomasi ve İstihbarat Araştırmaları Merkezi">
+      Cyber Diplomacy and Intelligence Research Center
+    </h1>
 
-    <p class="bio">
-      Dijital jeopolitik, siber güvenlik teknolojileri ve stratejik istihbarat alanlarında çalışan bağımsız araştırma merkezi.
+    <p class="bio"
+       data-en="An independent research center focused on digital geopolitics, cybersecurity technologies, and strategic intelligence."
+       data-tr="Dijital jeopolitik, siber güvenlik teknolojileri ve stratejik istihbarat alanlarında çalışan bağımsız araştırma merkezi.">
+      An independent research center focused on digital geopolitics, cybersecurity technologies, and strategic intelligence.
     </p>
 
-    <nav class="socials" aria-label="Sosyal medya">
+    <nav class="socials" aria-label="Social media">
       <a class="social" href="https://instagram.com/sdiamtr" aria-label="Instagram">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A4.5 4.5 0 1 1 12 16.5 4.5 4.5 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 12 14.5 2.5 2.5 0 0 0 12 9.5Zm5.2-2.7a1 1 0 1 1-1 1 1 1 0 0 1 1-1Z"/>
@@ -224,24 +279,32 @@
       </a>
     </nav>
 
-    <section class="links" aria-label="Bağlantılar">
-      <a class="link" href="https://instagram.com/sdiamtr">
-        Bizi Instagram Hesabımızda Takip Et!
+    <section class="links" aria-label="Links">
+      <a class="link" href="https://instagram.com/sdiamtr"
+         data-en="Follow us on Instagram"
+         data-tr="Bizi Instagram Hesabımızda Takip Et!">
+        Follow us on Instagram
         <span class="dots" aria-hidden="true">⋮</span>
       </a>
 
-      <a class="link" href="https://www.divandernegi.com.tr/bulten/siber-diplomasi-ve-istihbarat-arastirmalari-merkezi/">
-        Analiz ve Raporlarımızı Web Sitemizde Oku!
+      <a class="link" href="https://www.divandernegi.com.tr/bulten/siber-diplomasi-ve-istihbarat-arastirmalari-merkezi/"
+         data-en="Read Our Analyses and Reports"
+         data-tr="Analiz ve Raporlarımızı Web Sitemizde Oku!">
+        Read Our Analyses and Reports
         <span class="dots" aria-hidden="true">⋮</span>
       </a>
 
-      <a class="link" href="https://x.com/sdiam_tr">
-        Bizi X Hesabımızda Takip Et!
+      <a class="link" href="https://x.com/sdiam_tr"
+         data-en="Follow us on X"
+         data-tr="Bizi X Hesabımızda Takip Et!">
+        Follow us on X
         <span class="dots" aria-hidden="true">⋮</span>
       </a>
 
-      <a class="link" href="https://tr.linkedin.com/in/siber-diplomasi-ve-istihbarat-ara%C5%9Ft%C4%B1rmalar%C4%B1-merkezi-000503376">
-        Bizi LinkedIn Hesabımızda Takip Et!
+      <a class="link" href="https://tr.linkedin.com/in/siber-diplomasi-ve-istihbarat-ara%C5%9Ft%C4%B1rmalar%C4%B1-merkezi-000503376"
+         data-en="Follow us on LinkedIn"
+         data-tr="Bizi LinkedIn Hesabımızda Takip Et!">
+        Follow us on LinkedIn
         <span class="dots" aria-hidden="true">⋮</span>
       </a>
     </section>
@@ -249,8 +312,21 @@
     <footer>
       <a href="https://sdiam.org">sdiam.org</a>
       <span> · </span>
-      <a href="mailto:info@sdiam.org">İletişim</a>
+      <a href="mailto:info@sdiam.org" data-en="Contact" data-tr="İletişim">Contact</a>
     </footer>
   </main>
+
+  <script>
+    function setLang(lang){
+      document.documentElement.lang=lang;
+      document.querySelectorAll("[data-en]").forEach(function(el){
+        var dots=el.querySelector(".dots");
+        el.textContent=el.dataset[lang];
+        if(dots) el.appendChild(dots);
+      });
+      document.getElementById("enBtn").classList.toggle("active",lang==="en");
+      document.getElementById("trBtn").classList.toggle("active",lang==="tr");
+    }
+  </script>
 </body>
 </html>
